@@ -23,6 +23,7 @@
     <td><%=profile.phone_number%></td>
     <td><%=profile.cell_phone%></td>
     <td><%=profile.blood_type%></td>
+    <td><%= link_to image_tag(profile.image.url, class: 'media-object'), profile.image.url, target: '_blank' %></td>
   </tbody>
   <% end %>
 </table>

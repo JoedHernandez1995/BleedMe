@@ -1,11 +1,16 @@
 class ProfilesController < ApplicationController
 
+  before_action :set_profile, only: [:edit, :update, :show, :destroy]
+
   def index
     @profiles = Profile.all
   end
 
   def new
     @profile = Profile.new
+  end
+
+  def edit
   end
 
   def create
@@ -44,6 +49,6 @@ class ProfilesController < ApplicationController
     end
 
     def profile_params
-      params.require(:profile).permit(:name, :last_name, :birth_date, :biography, :country, :city, :phone_number, :cell_phone, :blood_type)
+      params.require(:profile).permit(:name, :last_name, :birth_date, :biography, :country, :city, :phone_number, :cell_phone, :blood_type, :image)
     end
 end
