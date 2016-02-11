@@ -1,4 +1,5 @@
 class Profile < ActiveRecord::Base
+  belongs_to :user
   has_attached_file :image,
                     url: "/system/:hash.:extension",
                     hash_secret: "abc123"

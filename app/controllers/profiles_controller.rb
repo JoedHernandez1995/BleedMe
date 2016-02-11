@@ -1,5 +1,5 @@
 class ProfilesController < ApplicationController
-
+  before_action :authenticate_user!
   before_action :set_profile, only: [:edit, :update, :show, :destroy]
 
   def index
@@ -7,7 +7,12 @@ class ProfilesController < ApplicationController
   end
 
   def new
-    @profile = Profile.new
+    if current_user.profile.nil?
+      @profile = Profile.new
+      respond_with(@profile)
+    else
+      redirect_to profiles_path
+    end
   end
 
   def edit
@@ -15,7 +20,8 @@ class ProfilesController < ApplicationController
 
   def create
     @profile = Profile.new(profile_params)
-    #add user here
+    @profile.user_id = current_user.id
+    @profile.email = current_user.email
     if @profile.save
       flash[:success] = "Profile was sucessfully created"
       redirect_to profile_path(@profile)
