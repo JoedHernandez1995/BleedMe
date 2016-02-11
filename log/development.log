@@ -900,3 +900,179 @@ Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb
 
 
 Started GET "/assets/profiles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-10 21:35:25 -0600
+
+
+Started GET "/profiles" for ::1 at 2016-02-10 21:44:51 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ProfilesController#index as HTML
+  [1m[35mProfile Load (0.2ms)[0m  SELECT "profiles".* FROM "profiles"
+  Rendered profiles/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 6359ms (Views: 6343.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-49da3f6d06374e2592ba4ea3614b2433bfd06ad0a04138a16381df5c0f7231be.css?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/materialize/initial.self-5fc251c38da473321319aa59154bbaf8d6a0e5dd635dcb3e4de6f70af7ef6f5c.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/materialize/animation.self-a1028b0bcf2e26331bedf7b90e81103f0707e69fdec488aa951de94b51987767.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/materialize/hammer.min.self-bf8bdb0953b1a135f96716e362e1f7a8e64168c914fa77ca31973bb70e57a731.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/materialize/velocity.min.self-5adbb81af5c205a959e06198156b4b31fcd57f02c592e3fb096d7b74e8f401a6.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/materialize/jquery.easing.1.3.self-0170bc905fbddc075a56bdccce1be6a58f3713a14137b607ba9bd9f96fd7835f.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/materialize/jquery.hammer.self-73fd69102f356b9abfc9ee242b19895f62454f42cfcfa1f066be71d2c8f41c7a.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/materialize/global.self-90649deff3358499c5859330da1363eea3e2bef75c80df5940f3894778f95027.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/materialize/dropdown.self-a1ff4400a417f25698cc5cc70e36e273953beaf52226d09b3795ce3edc473a66.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/materialize/leanModal.self-4db1374f875e0a1a2ba3389d23cae8f6f0c2672e7e69aeab7645ed51d26e6915.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/materialize/materialbox.self-6c6b2ba48598681c90551b540338699c75cf2f9ada34cc4b22570c217b9292d8.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/materialize/parallax.self-7ac34f0f3dcef83deee116ea473a2770cec13e07c8e0dcce08cc2372bbe295d3.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/materialize/tabs.self-922f8a5ef8f7381c945259a9f1dcaf6d628630cda8fcbbfe182ea653091b165c.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/materialize/collapsible.self-28e651bb34f045977f525ed2f35a22955e549b9e783851dba0b75b480c75abb2.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/materialize/waves.self-26e9b9cfaa9ccbc292ed510f654bd279d69695f5337a14c9800b36e92f96735b.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/materialize/toasts.self-1eaa9f33c4c3b83f381997876ba6ac53899a5ca72a6b401708c32625fc553adc.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/materialize/sideNav.self-d1aa0f50b6f5d0d9a7086344d806fc133274dd021e58f837cbe39e309012045b.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/materialize/scrollspy.self-9bd8d701ac90c813a0d051ab4943150bdb536d863646d8b349c42a88edb31cf8.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/materialize/forms.self-95e85e335577e28202a4b4034a754320f866221010ed4a0be2cbf6af0dd79f1d.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/materialize/tooltip.self-df3538fd067523c8b7f4d50e060340ec0b551ebaba9733e157c404df9a96a185.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/materialize/cards.self-b1de04b6f5f525d63199f556bb55d5b8bdae7170b91bfcb503958bc8ed10945b.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/materialize/chips.self-9b19ca899ba360746581059852bf2a40b3338402eef9df9a7806efd8578056dd.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/materialize/pushpin.self-3e487290a48f23142c992c158b45cbd0be9c83de7c23abbb33b195954d1883cd.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/materialize/buttons.self-fc0951c300b1984a00694eabc8c451531be448d646ac073b05e4d2fbf7209302.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/materialize/transitions.self-c527b205edfdd1f961487c4c7beaf83c335262accb4dff964341a86eb60fd2f2.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/materialize/slider.self-8052f7188f9e8ab3d03b246d4942a4824edb9614d0d130051d11ba1354c9c798.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/materialize/date_picker/picker.self-f7869dc9881d3874917e009ea6e30d68817b1bd1247665fb653e0f87393fb60f.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/materialize/date_picker/picker.date.self-5924b278beda2df8570f137f72b37e2d0f516acbc11a0994d1abb74380f078ef.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/materialize/character_counter.self-f3a78940ad5b851c1b7b79d86a5d5d9bdf0dc15e0e58e2a58b3eb57d845fbd37.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/materialize/carousel.self-6f3b9002af3ab4d871a03a44d2e174370720ab31f19a4ee543c1904c32e2befa.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/materialize-sprockets.self-4691589913babdfbd3fb736895105a8e826d4abde842e6d1e8dd2d188e255bc7.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/materialize/scrollFire.self-d38b34eac05d33baa79181ef5ba72c67b7f73714ff11cda22495d30f4469298f.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/profiles.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/application.self-7862a8a8b42407b4741a1adeeea35f0d13ddc4f702ec532adb0674491d296495.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/materialize/extras/nouislider.self-4fae27c975c8a9da48cc0079f7c57b6447316d6019de31332a3f5da50c4c5799.js?body=1" for ::1 at 2016-02-10 21:44:57 -0600
+
+
+Started GET "/assets/roboto/Roboto-Bold-e7cbaf29c3812b80577cb845b5d359486242338f25620ba65260e265464fe359.woff" for ::1 at 2016-02-10 21:44:58 -0600
+
+
+Started GET "/assets/roboto/Roboto-Light-2cbb012f1d36c09d3f17100ef2cf8213cbd429d9e519dff536c12ed6f07a0d25.woff" for ::1 at 2016-02-10 21:44:58 -0600
+
+
+Started GET "/assets/roboto/Roboto-Thin-ae65b047fa4032f18a40480a93d1aae6707a756e7b3bb5f060467cd1f59b1625.woff" for ::1 at 2016-02-10 21:44:58 -0600
+
+
+Started GET "/assets/roboto/Roboto-Regular-2cd6b07b7855716761250290ce3cf447ccc98e793e484294d3fa8ccbb55b016a.woff" for ::1 at 2016-02-10 21:44:58 -0600
+
+
+Started GET "/assets/roboto/Roboto-Medium-72841a4c4171b13ab1edf2c8f8046f0958f2ff608ce4e0d568dd5c6319f8a933.woff" for ::1 at 2016-02-10 21:44:58 -0600
+
+
+Started GET "/profiles/new" for ::1 at 2016-02-10 21:45:30 -0600
+Processing by ProfilesController#new as HTML
+  Rendered profiles/_form.html.erb (51.8ms)
+  Rendered profiles/new.html.erb within layouts/application (56.2ms)
+Completed 200 OK in 123ms (Views: 122.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/profiles/new" for ::1 at 2016-02-10 21:45:35 -0600
+Processing by ProfilesController#new as HTML
+  Rendered profiles/_form.html.erb (3.7ms)
+  Rendered profiles/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 85ms (Views: 84.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/profiles/4" for ::1 at 2016-02-10 21:45:35 -0600
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProfile Load (0.3ms)[0m  [1mSELECT  "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered profiles/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 100ms (Views: 86.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/profiles/4" for ::1 at 2016-02-10 21:45:35 -0600
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mProfile Load (0.1ms)[0m  SELECT  "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered profiles/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 104ms (Views: 102.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-02-10 22:00:58 -0600
+Processing by PagesController#home as HTML
+  Rendered pages/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 95ms (Views: 94.7ms | ActiveRecord: 0.0ms)
