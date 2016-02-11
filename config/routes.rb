@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  resources :profiles
+
+  root 'pages#home'
+  get '/about' => 'pages#about'
+  get '/terms' => 'pages#terms'
+  get '/help' => 'pages#help'
+  get '/iphone' => 'pages#iphone'
+  get '/android' => 'pages#android'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
