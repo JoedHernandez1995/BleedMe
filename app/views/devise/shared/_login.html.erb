@@ -1,0 +1,78 @@
+<body class="pink">
+  <h2 class="white-text text center">BleedMe</h2>
+  <div class="row">
+    <div class="col s6 push-s3">
+      <div class="card pink-text text">
+        <div class="card-content">
+          <span class="card-title activator"><i class="material-icons right">more_vert</i></span>
+            <h2 class="center">Iniciar Sesión</h2>
+            <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <div class="row">
+              <div class="input-field col s8 push-s2">
+                <%= f.label :email, 'Correo' %><br />
+                <%= f.email_field :email, id:"email", class:"validate" %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s8 push-s2">
+                <%= f.label :password, 'Contraseña'%><br />
+                <%= f.password_field :password, autocomplete: "off" %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s8 push-s2">
+                <% if devise_mapping.rememberable? -%>
+                  <div class="field">
+                    <%= f.check_box :remember_me %>
+                    <%= f.label :remember_me, 'Recordarme' %>
+                  </div>
+                <% end -%>
+              </div>
+            </div>
+          </br>
+          <div class="row">
+            <div class="col s8 push-s2 center">
+              <div class="actions">
+                <%= f.submit "Ingresar", class:"pink btn" %>
+              </div>
+            </div>
+          </div>
+          <% end %>
+          <div class="row">
+            <%= link_to 'Pagina de Inicio', root_path, class:"pink-text text" %>
+          </div>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title pink-text text"><i class="material-icons right">close</i></span>
+          <h2 class="center">Registro</h2>
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= devise_error_messages! %>
+            <div class="row">
+              <div class="input-field col s8 push-s2">
+                <%= f.label :email, 'Correo' %><br />
+                <%= f.email_field :email, autofocus: true %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s8 push-s2">
+                <%= f.label :password, 'Contraseña' %>
+                <%= f.password_field :password, autocomplete: "off" %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s8 push-s2">
+                <%= f.label :password_confirmation, 'Confirmar Contraseña' %><br />
+                <%= f.password_field :password_confirmation, autocomplete: "off" %>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s8 push-s2 center">
+                <%= f.submit "Registrarse", class:"pink btn" %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
