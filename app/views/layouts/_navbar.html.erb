@@ -1,6 +1,4 @@
-<% if user_signed_in? %>
-<% else%>
-  <% if !new_user_session_path %>
+<% if controller_name == "pages" && !user_signed_in?%>
     <nav>
       <div class="light-blue nav-wrapper">
         <a href="#" class="brand-logo center">BleedMe</a>
@@ -17,5 +15,21 @@
         </ul>
       </div>
     </nav>
-  <% end %>
-<% end %>
+<% elsif user_signed_in? %>
+  <nav>
+    <div class="light-blue nav-wrapper">
+      <a href="#" class="brand-logo center">BleedMe</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="#">Timeline</a></li>
+        <li><a href="#">Notificaciones</a></li>
+        <li><a href="#">Mensajes</a></li>
+      </ul>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="#">Campañas</a></li>
+        <li><%= link_to "Mi Perfil", profiles_path %></li>
+        <li><a href="#">Post</a></li>
+        <li><%= link_to('Logout', destroy_user_session_path, :method => :delete, class:"pink") %></li>
+      </ul>
+    </div>
+  </nav>
+<%end%>

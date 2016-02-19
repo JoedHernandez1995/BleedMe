@@ -9,7 +9,6 @@ class ProfilesController < ApplicationController
   def new
     if current_user.profile.nil?
       @profile = Profile.new
-      respond_with(@profile)
     else
       redirect_to profiles_path
     end

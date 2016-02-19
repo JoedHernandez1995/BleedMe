@@ -1,30 +1,74 @@
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Last Name</th>
-      <th>Birth Date</th>
-      <th>Bio</th>
-      <th>Country</th>
-      <th>City</th>
-      <th>Phone</th>
-      <th>Cellphone</th>
-      <th>Blood Type</th>
-    </tr>
-  </thead>
+<%if current_user.profile == nil %>
+<h1>You are missing a Profile </h1>
+<td><%= link_to 'Create Profile', new_profile_path %></td>
+<%else%>
   <% @profiles.each do |profile| %>
-  <tbody>
-    <td><%=profile.name%></td>
-    <td><%=profile.last_name%></td>
-    <td><%=profile.birth_date%></td>
-    <td><%=profile.biography%></td>
-    <td><%=profile.country%></td>
-    <td><%=profile.city%></td>
-    <td><%=profile.phone_number%></td>
-    <td><%=profile.cell_phone%></td>
-    <td><%=profile.blood_type%></td>
-    <td><%= link_to image_tag(profile.image.url, class: 'media-object'), profile.image.url, target: '_blank' %></td>
-  </tbody>
+    <%if current_user.id == profile.user_id %>
+      </br>
+      <div class="row">
+        <div class="col s12">
+          <div class="card" style="height:300px">
+            <div class="card-content">
+              <div clasS="row">
+                <span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col s3 push-s1">
+                </br>
+                <a class="btn-floating btn-large waves-effect waves-light pink"><i class="large material-icons">insert_chart</i></a>
+              </div>
+              <div class="col s3">
+                </br>
+                <%=profile.name%> <%=profile.last_name%>
+                Occupation
+              </div>
+              <div class="col s3">
+                </br>
+                <%=profile.blood_type%></br>
+                Blood Group
+              </div>
+              <div class="col s3">
+                </br>
+                From: </br><%=profile.country%>,<%=profile.city%>
+              </div>
+            </div>
+          </div>
+          <div class="card-reveal">
+            <div class="row">
+              <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+              <h5><%= profile.name %> <%= profile.last_name%></h5>
+              <p><i class="material-icons">work</i> Occupation</p>
+              <p><%=profile.biography%></p>
+              <p><i class="material-icons">phone</i> <%=profile.phone_number%> | <i class="material-icons">stay_current_portrait</i> <%=profile.cell_phone%></p>
+              <p><i class="material-icons">email</i> <%=current_user.email%></p>
+              <p><i class="material-icons">cake</i> <%=profile.birth_date%>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s4">
+        <div class="card-panel white">
+          <span class="pink-text">
+            <h5>Biography</h5><hr>
+            <%=profile.biography%>
+            <hr>
+            Joined on: <%= current_user.created_at.to_date.to_formatted_s :long_ordinal %>
+          </span>
+        </div>
+      </div>
+
+      <div class="col s8">
+        <div class="card-panel white">
+          <span class="white-text">
+            <h3>Posts</h3>
+          </span>
+        </div>
+      </div>
+    </div>
   <% end %>
-</table>
-<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+<% end %>
+<% end %>

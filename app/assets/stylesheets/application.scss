@@ -43,3 +43,8 @@
 
 $primary-color: color("blue", "lighten-2") !default;
 @import "materialize";
+
+.biography{
+  margin-top: 0;
+  padding-top: 0;
+}
