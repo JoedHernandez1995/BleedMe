@@ -17,6 +17,13 @@
         </div>
         <div class="row">
           <div class="input-field col s12">
+            <i class="material-icons prefix">work</i>
+            <%= f.label :occupation, "Ocupación" %>
+            <%= f.text_field :occupation %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
             <i class="material-icons prefix">mode_edit</i>
             <%= f.label :biography, "Cuentanos sobre ti" %>
             <%= f.text_area :biography, class:"materialize-textarea" %>

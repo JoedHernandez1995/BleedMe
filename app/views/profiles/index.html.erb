@@ -21,7 +21,7 @@
               <div class="col s3 center">
                 </br>
                 <%=profile.name%> <%=profile.last_name%>
-                Occupation
+                <%=profile.occupation%>
               </div>
               <div class="col s3 center">
                 </br>
@@ -41,7 +41,7 @@
             <div class="row">
               <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
               <h5><%= profile.name %> <%= profile.last_name%></h5>
-              <p><i class="material-icons">work</i> Occupation</p>
+              <p><i class="material-icons">work</i><%=profile.occupation%></p>
               <p><%=profile.biography%></p>
               <p><i class="material-icons">phone</i> <%=profile.phone_number%> | <i class="material-icons">stay_current_portrait</i> <%=profile.cell_phone%></p>
               <p><i class="material-icons">email</i> <%=current_user.email%></p>
