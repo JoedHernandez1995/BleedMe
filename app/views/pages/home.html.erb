@@ -1,11 +1,7 @@
 <div class="slider">
   <ul class="slides">
     <li>
-      <img src="http://lorempixel.com/580/250/nature/1"> <!-- random image -->
-      <div class="caption center-align">
-        <h3>This is our big Tagline!</h3>
-        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-      </div>
+      <%= image_tag("slide1.jpg", :alt => "donate blood") %> <!-- random image -->
     </li>
     <li>
       <img src="http://lorempixel.com/580/250/nature/2"> <!-- random image -->
@@ -31,3 +27,9 @@
   </ul>
 </div>
 <%= link_to 'Profiles', profiles_path %>
+
+<script>
+  $(document).ready(function(){
+    $('.slider').slider({full_width: true});
+  });
+</script>

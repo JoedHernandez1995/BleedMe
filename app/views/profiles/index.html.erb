@@ -18,20 +18,23 @@
                 </br>
                 <a class="btn-floating btn-large waves-effect waves-light pink"><i class="large material-icons">insert_chart</i></a>
               </div>
-              <div class="col s3">
+              <div class="col s3 center">
                 </br>
                 <%=profile.name%> <%=profile.last_name%>
                 Occupation
               </div>
-              <div class="col s3">
+              <div class="col s3 center">
                 </br>
                 <%=profile.blood_type%></br>
                 Blood Group
               </div>
               <div class="col s3">
                 </br>
-                From: </br><%=profile.country%>,<%=profile.city%>
+                From: </br><%=profile.city%>, <%=profile.country%>
               </div>
+            </div>
+            <div class="row">
+              <%= link_to "Editar Mi Perfil", edit_profile_path(profile) %>
             </div>
           </div>
           <div class="card-reveal">
@@ -63,8 +66,8 @@
 
       <div class="col s8">
         <div class="card-panel white">
-          <span class="white-text">
-            <h3>Posts</h3>
+          <span class="pink-text text">
+            <h4>Posts</h4>
           </span>
         </div>
       </div>
