@@ -9,8 +9,8 @@
             <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
             <div class="row">
               <div class="input-field col s8 push-s2">
-                <%= f.label :email, 'Correo' %><br />
-                <%= f.email_field :email, id:"email", class:"validate" %>
+                <%= f.label :login, 'Correo o Nombre de Usuario' %><br />
+                <%= f.email_field :login, id: "login", class:"validate" %>
               </div>
             </div>
             <div class="row">
@@ -48,9 +48,13 @@
           <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
             <%= devise_error_messages! %>
             <div class="row">
-              <div class="input-field col s8 push-s2">
+              <div class="input-field col s4 push-s2">
                 <%= f.label :email, 'Correo' %><br />
                 <%= f.email_field :email, autofocus: true %>
+              </div>
+              <div class="input-field col s4 push-s2">
+                <%= f.label :username, 'Nombre de Usuario' %><br />
+                <%= f.email_field :username, autofocus: true %>
               </div>
             </div>
             <div class="row">
