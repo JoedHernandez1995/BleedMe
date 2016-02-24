@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :profiles
-
+  resources :posts
   root 'pages#home'
   get '/about' => 'pages#about'
   get '/terms' => 'pages#terms'

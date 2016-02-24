@@ -4,6 +4,7 @@ class ProfilesController < ApplicationController
 
   def index
     @profiles = Profile.all
+    @posts = Post.all
   end
 
   def new
