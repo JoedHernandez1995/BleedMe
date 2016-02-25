@@ -1,4 +1,4 @@
-<body class="pink">
+<body>
   <%if current_user.profile == nil %>
   <h1>You are missing a Profile </h1>
   <td><%= link_to 'Create Profile', new_profile_path %></td>
@@ -83,10 +83,15 @@
 </div>
 <% @posts.each do |post| %>
   <% if post.user_id == current_user.id %>
+
     <div class="row">
       <div class="col s8 push-s4">
         <div class="card-panel white">
-          <p><%=post.body%>
+          <div class="row">
+            <%=image_tag profile.image.url(:mini), class:"circle z-depth-3"%>
+            <%= link_to profile.name,profile_path(profile)%>
+          </div>
+          <p><%=post.body%></p>
         </div>
       </div>
     </div>

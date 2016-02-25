@@ -5,6 +5,7 @@ class Profile < ActiveRecord::Base
     :url => "/system/:attachment/:id/:basename_:style.:extension",
 
     :styles => {
+      :mini     => ['50x50#',    :jpg, :quality => 70],
       :thumb    => ['100x100#',  :jpg, :quality => 70],
       :small    => ['150x150#',  :jpg, :quality => 70],
       :medium   => ['200x200#',  :jpg, :quality => 70],
@@ -14,6 +15,7 @@ class Profile < ActiveRecord::Base
     },
 
     :convert_options => {
+      :mini     => '-set colorspace sRGB -strip',
       :thumb    => '-set colorspace sRGB -strip',
       :small    => '-set colorspace sRGB -strip',
       :medium   => '-set colorspace sRGB -strip',
