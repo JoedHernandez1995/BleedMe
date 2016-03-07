@@ -1,5 +1,5 @@
 class AddUseridToRequests < ActiveRecord::Migration
   def change
-    add_column :rquests, :user_id, :integer
+    add_column :requests, :user_id, :integer
   end
 end

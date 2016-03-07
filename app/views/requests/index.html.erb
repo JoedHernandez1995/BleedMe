@@ -1,19 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Requests</h1>
+<h1>Solicitudes de donación</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Phone number</th>
-      <th>Email</th>
-      <th>Needed for</th>
-      <th>Blood type needed</th>
-      <th>Blood units needed</th>
-      <th>Date needed</th>
-      <th>Compatible blood types</th>
-      <th>Message</th>
+      <th>Nombre de contacto</th>
+      <th>Teléfono de contacto</th>
+      <th>Correo electrónico</th>
+      <th>Sangre para</th>
+      <th>Tipo de sangre necesitada</th>
+      <th>Pintas de sangre necesitadas</th>
+      <th>Fecha requerida</th>
+      <th>Tipos de sangre compatibles</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -29,10 +28,11 @@
         <td><%= request.blood_units_needed %></td>
         <td><%= request.date_needed %></td>
         <td><%= request.compatible_blood_types %></td>
-        <td><%= request.message %></td>
-        <td><%= link_to 'Show', request %></td>
-        <td><%= link_to 'Edit', edit_request_path(request) %></td>
-        <td><%= link_to 'Destroy', request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Más información', request %></td>
+        <% if current_user.id == request.user_id %>
+        <td><%= link_to 'Editar', edit_request_path(request) %></td>
+        <td><%= link_to 'Eliminar', request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
@@ -40,4 +40,4 @@
 
 <br>
 
-<%= link_to 'New Request', new_request_path %>
+<%= link_to 'Nueva Solicitud', new_request_path %>

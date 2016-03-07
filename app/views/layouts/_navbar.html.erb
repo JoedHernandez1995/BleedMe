@@ -16,6 +16,11 @@
       </div>
     </nav>
 <% elsif user_signed_in? %>
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="requests#index">Ver lista</a></li>
+  <li><a href="requests#new">Crear nueva solicitud</a></li>
+  <li class="divider"></li>
+</ul>
   <nav>
     <div class="light-blue nav-wrapper">
       <a href="#" class="brand-logo center">BleedMe</a>
@@ -26,6 +31,8 @@
       </ul>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="#">Campañas</a></li>
+        <li><a class="dropdown-button" data-activates="dropdown1">Solicitudes de donación<i class="material-icons right">arrow_drop_down</i></a></li>
+        
         <li><%= link_to "Mi Perfil", profiles_path %></li>
         <li><a href="#">Post</a></li>
         <li><%= link_to('Logout', destroy_user_session_path, :method => :delete, class:"lime") %></li>

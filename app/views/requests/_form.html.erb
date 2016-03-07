@@ -20,16 +20,12 @@
     <%= f.text_field :phone_number %>
   </div>
   <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
     <%= f.label :needed_for %><br>
-    <%= f.text_field :needed_for %>
+    <%= f.select(:needed_for, ['Mi','Otro']) %>
   </div>
   <div class="field">
     <%= f.label :blood_type_needed %><br>
-    <%= f.text_field :blood_type_needed %>
+    <%= f.select(:blood_type_needed, ['O+','O-','A+','A-','B+','B-','AB+','AB-']) %>
   </div>
   <div class="field">
     <%= f.label :blood_units_needed %><br>
@@ -37,7 +33,7 @@
   </div>
   <div class="field">
     <%= f.label :date_needed %><br>
-    <%= f.date_select :date_needed %>
+    <%= f.text_field :date_needed, class: "datepicker" %>
   </div>
   <div class="field">
     <%= f.label :compatible_blood_types %><br>
