@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  phone_number: MyString
+  email: MyString
+  needed_for: MyString
+  blood_type_needed: MyString
+  blood_units_needed: 9.99
+  date_needed: 2016-03-07
+  compatible_blood_types: MyText
+  message: MyText
+
+two:
+  name: MyString
+  phone_number: MyString
+  email: MyString
+  needed_for: MyString
+  blood_type_needed: MyString
+  blood_units_needed: 9.99
+  date_needed: 2016-03-07
+  compatible_blood_types: MyText
+  message: MyText

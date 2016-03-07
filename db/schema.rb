@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160224064346) do
+ActiveRecord::Schema.define(version: 20160307031332) do
 
   create_table "posts", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -45,6 +45,20 @@ ActiveRecord::Schema.define(version: 20160224064346) do
     t.string   "landscape_content_type"
     t.integer  "landscape_file_size"
     t.datetime "landscape_updated_at"
+  end
+
+  create_table "requests", force: :cascade do |t|
+    t.string   "name"
+    t.string   "phone_number"
+    t.string   "email"
+    t.string   "needed_for"
+    t.string   "blood_type_needed"
+    t.decimal  "blood_units_needed"
+    t.date     "date_needed"
+    t.text     "compatible_blood_types"
+    t.text     "message"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "users", force: :cascade do |t|
