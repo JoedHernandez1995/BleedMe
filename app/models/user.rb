@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
 
   has_many :posts
 
+  has_many :requests
+
   attr_accessor :login
 
   validates :username,
