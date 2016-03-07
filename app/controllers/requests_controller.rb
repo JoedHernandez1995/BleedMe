@@ -27,6 +27,30 @@ class RequestsController < ApplicationController
     @request = Request.new(request_params)
     @request.user_id = current_user.id
     @request.email = current_user.email
+    if @request.blood_type_needed == "A+"
+      @request.compatible_blood_types = "A+,A-,O+,O-"
+      
+    elsif @request.blood_type_needed == "B+"
+      @request.compatible_blood_types = "B+,B-,O+,O-"
+      
+    elsif @request.blood_type_needed == "AB+"
+      @request.compatible_blood_types = "A+,B+,AB+,O+,A-,B-,AB-,O-"
+      
+    elsif @request.blood_type_needed == "O+"
+      @request.compatible_blood_types = "O+,O-"
+      
+    elsif @request.blood_type_needed == "A-"
+      @request.compatible_blood_types = "A-,O-"
+      
+    elsif @request.blood_type_needed == "B-"
+      @request.compatible_blood_types = "B-,O-"
+      
+    elsif @request.blood_type_needed == "AB-"
+      @request.compatible_blood_types = "A-,B-,AB-,O-"
+      
+    elsif @request.blood_type_needed == "O-"
+      @request.compatible_blood_types = "O-"
+    end
     respond_to do |format|
       if @request.save
         format.html { redirect_to @request, notice: 'Request was successfully created.' }
