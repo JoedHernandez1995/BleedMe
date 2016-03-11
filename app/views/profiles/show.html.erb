@@ -1,0 +1,52 @@
+<div class="row">
+  <div class="col s12">
+    <div class="card" style="height:500px">
+      <div class="card-image waves-effect waves-block waves-light">
+        <span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i></span>
+        <%= image_tag @profile.landscape.url(:regular), class:"activator"%>
+      </div>
+      <div class="card-content">
+        <div class="row">
+          <div class="col s3 center">
+            <a href="#"><%= image_tag @profile.image.url(:small), class:"circle z-depth-3 modal-trigger", href:"#modal1"%></a>
+          </div>
+          <div class="col s3 center">
+            <h5 class="pink-text text"><%=@profile.name%> <%=@profile.last_name%></h5>
+            <h6 class="pink-text text-lighten-2"><%=@profile.occupation%><h6>
+            </div>
+            <div class="col s3 center">
+              <h5 class="pink-text text"><%=@profile.blood_type%></h5>
+              <h6 class="pink-text text-lighten-2">Tipo de Sangre</h6>
+            </div>
+            <div class="col s3 center">
+              <h5 class="pink-text text"><%=@profile.city%>,<%=@profile.country%></h5>
+              <h6 class="pink-text text-lighten-2">Residencia</h6>
+            </br></br>
+          </div>
+        </div>
+      </div>
+      <div class="card-reveal pink-text text">
+        <div class="row">
+          <span class="card-title"><i class="material-icons right">close</i></span>
+          <h3><%= @profile.name %> <%= @profile.last_name%></h3></br>
+          <h5><i class="material-icons">work</i><%=@profile.occupation%></h5></br>
+          <h5><i class="material-icons">phone</i> <%=@profile.phone_number%> | <i class="material-icons">stay_current_portrait</i> <%=@profile.cell_phone%></h5></br>
+          <h5><i class="material-icons">email</i> <%=@profile.email%></h5></br>
+          <h5><i class="material-icons">cake</i> <%=@profile.birth_date%> </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col s4">
+    <div class="card-panel white">
+      <span class="pink-text">
+        <h5>Acerca de Mi</h5><hr>
+        <%=@profile.biography%>
+        <hr>
+        Joined on: <%= current_user.created_at.to_date.to_formatted_s :long_ordinal %>
+      </span>
+    </div>
+  </div>

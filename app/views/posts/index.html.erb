@@ -1,0 +1,26 @@
+<br>
+<br>
+<h3 class="center">Timeline</h3>
+<div class="container">
+  <div class="col s6 push-s3">
+    <ul class="collection">
+      <% @posts.each do |post| %>
+        <% @profiles.each do |profile| %>
+          <% if profile.user_id == post.user_id %>
+          <li class="collection-item avatar">
+            <%=image_tag profile.image.url(:mini), class:"circle z-depth-3"%>
+            <% if profile.user_id == current_user.id %>
+              <span class="title"><%= link_to profile.name, profiles_path %></span>
+            <%else%>
+              <span class="title"><%= link_to profile.name,profile_path(profile)%></span>
+            <% end %>
+            <p><p class="grey-text text-lighten-1"><%=time_ago_in_words(post.created_at)%> ago</p>  <br>
+              <%=post.body%>
+            </p>
+          </li>
+        <%end%>
+      <%end%>
+      <% end %>
+    </ul>
+  </div>
+</div>

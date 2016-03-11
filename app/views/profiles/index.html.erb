@@ -1,7 +1,14 @@
 <body>
   <%if current_user.profile == nil %>
-  <h1> Todavía no has creado un perfil. Personaliza tu espacio haciendo click en Crear Perfil </h1>
-  <td><%= link_to 'Crear mi perfil', new_profile_path %></td>
+  <div class="container">
+    <div class="col s6 push-s3 center">
+    </br>
+      <%= image_tag("social-3.png", :alt=>"social", size:"150x150")%>
+    </br>
+      <h3> Todavía no has creado un perfil. Personaliza tu espacio haciendo click en Crear Perfil </h3>
+      <%= link_to 'Crear mi perfil', new_profile_path, class:"btn pink" %>
+    </div>
+  </div>
   <%else%>
   <% @profiles.each do |profile| %>
   <%if current_user.id == profile.user_id %>
@@ -81,22 +88,25 @@
     </div>
   </div>
 </div>
-<% @posts.each do |post| %>
-  <% if post.user_id == current_user.id %>
-
-    <div class="row">
-      <div class="col s8 push-s4">
-        <div class="card-panel white">
-          <div class="row">
-            <%=image_tag profile.image.url(:mini), class:"circle z-depth-3"%>
-            <%= link_to profile.name,profile_path(profile)%>
-          </div>
-          <p><%=post.body%></p>
-        </div>
-      </div>
-    </div>
-  <%end%>
-<%end%>
+<div class="row">
+  <div class="col s8 push-s4">
+    <h4>Posts</h4>
+    <ul class="collection">
+    <% @posts.each do |post| %>
+      <% if post.user_id == current_user.id %>
+        <li class="collection-item avatar">
+          <%=image_tag profile.image.url(:mini), class:"circle z-depth-3"%>
+          <span class="title"><%= link_to profile.name,profile_path(profile)%></span>
+          <p><p class="grey-text text-lighten-1"><%=time_ago_in_words(post.created_at)%> ago</p><br>
+             <%=post.body%>
+          </p>
+          <a href="#!" class="secondary-content"><i class="material-icons">clear</i></a>
+        </li>
+      <%end%>
+    <%end%>
+    </ul>
+  </div>
+</div>
 
 
 <div id="modal1" class="modal", style="height:600px">
