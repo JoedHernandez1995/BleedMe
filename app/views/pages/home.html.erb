@@ -1,15 +1,10 @@
 <div class="slider">
-  <h1>Hello</h1>
   <ul class="slides">
     <li>
       <%= image_tag("slide1.jpg", :alt => "donate blood") %> <!-- random image -->
     </li>
     <li>
-      <img src="http://lorempixel.com/580/250/nature/2"> <!-- random image -->
-      <div class="caption left-align">
-        <h3>Left Aligned Caption</h3>
-        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-      </div>
+      <%= image_tag("slide2.jpg", :alt => "donate blood") %>
     </li>
     <li>
       <img src="http://lorempixel.com/580/250/nature/3"> <!-- random image -->
@@ -26,4 +21,49 @@
       </div>
     </li>
   </ul>
+</div>
+<div class="container">
+  <div class="row">
+    <h3 class="center">Nuestras áreas de trabajo</h3> </br>
+    <div class="col s3">
+      <div class="row center">
+        <%= image_tag("social-2.png", :alt=>"social", size:"120x120")%>
+      </div>
+      <div class="row">
+        <h5 class="center">Emprendimiento Social</h5>
+      </div>
+    </div>
+    <div class="col s3">
+      <div class="row center">
+        <%= image_tag("cross.png", :alt=>"health", size:"120x120")%>
+      </div>
+      <div class="row">
+        <h5 class="center">Salud</h5>
+      </div>
+    </div>
+    <div class="col s3">
+      <div class="row center">
+        <%= image_tag("computer.png", :alt=>"tech", size:"120x120")%>
+      </div>
+      <div class="row">
+        <h5 class="center">Tecnología</h5>
+      </div>
+    </div>
+    <div class="col s3">
+      <div class="row center">
+        <%= image_tag("coins.png", :alt=>"coins", size:"120x120")%>
+      </div>
+      <div class="row">
+        <h5 class="center">Servicios</h5>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <h3 class="center">Nuestra meta</h3>
+    <p>Nuestra meta principal es solucionar la falta de donantes de sangre permanentes a nivel nacional,
+      la falta de conciencia en la población y  lamentablemente, en Honduras menos del 1% de la población son donantes permanentes. El único banco de sangre
+      que abastece a nivel nacional es la Cruz Roja y solo esta abasteciendo menos del 40%. También queremos solucionar el problema de la falta de comunicación. Muchas
+      veces se crean campañas de donación de sangre y un gran sector de la población no se da cuenta de que están sucediendo esas campañas, entonces muy poca
+      gente llega a donar.</p>
+  </div>
 </div>

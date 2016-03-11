@@ -1,14 +1,13 @@
 Rails.application.routes.draw do
-  resources :requests
   devise_for :users
   resources :profiles
   resources :posts
+
   root 'pages#home'
   get '/about' => 'pages#about'
-  get '/terms' => 'pages#terms'
-  get '/help' => 'pages#help'
-  get '/iphone' => 'pages#iphone'
-  get '/android' => 'pages#android'
+  get '/donations' => 'pages#donations'
+  get '/news' => 'pages#news'
+  get '/contact' => 'pages#icontact'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

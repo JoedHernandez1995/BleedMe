@@ -5,15 +5,12 @@ class PagesController < ApplicationController
   def about
   end
 
-  def terms
+  def donations
   end
 
-  def help
+  def contact
   end
 
-  def iphone
-  end
-
-  def android
+  def news
   end
 end
