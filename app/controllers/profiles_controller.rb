@@ -24,7 +24,7 @@ class ProfilesController < ApplicationController
     @profile.email = current_user.email
     if @profile.save
       flash[:success] = "Profile was sucessfully created"
-      redirect_to profile_path(@profile)
+      redirect_to profiles_path
     else
       render 'new'
     end
@@ -40,6 +40,7 @@ class ProfilesController < ApplicationController
   end
 
   def show
+    @posts = Post.all
   end
 
   def destroy

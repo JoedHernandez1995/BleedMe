@@ -1,43 +1,42 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Solicitudes de donación</h1>
+<h3 class="center pink-text text">Solicitudes de sangre</h3>
 
-<table>
-  <thead>
-    <tr>
-      <th>Nombre de contacto</th>
-      <th>Teléfono de contacto</th>
-      <th>Correo electrónico</th>
-      <th>Sangre para</th>
-      <th>Tipo de sangre necesitada</th>
-      <th>Pintas de sangre necesitadas</th>
-      <th>Fecha requerida</th>
-      <th>Tipos de sangre compatibles</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @requests.each do |request| %>
+<div class="container">
+  <table class="responsive highlight bordered">
+    <thead>
       <tr>
-        <td><%= request.name %></td>
-        <td><%= request.phone_number %></td>
-        <td><%= request.email %></td>
-        <td><%= request.needed_for %></td>
-        <td><%= request.blood_type_needed %></td>
-        <td><%= request.blood_units_needed %></td>
-        <td><%= request.date_needed %></td>
-        <td><%= request.compatible_blood_types %></td>
-        <td><%= link_to 'Más información', request %></td>
-        <% if current_user.id == request.user_id %>
-        <td><%= link_to 'Editar', edit_request_path(request) %></td>
-        <td><%= link_to 'Eliminar', request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <% end %>
+        <th>Nombre de contacto</th>
+        <th>Teléfono de contacto</th>
+        <th>Correo electrónico</th>
+        <th>Sangre para</th>
+        <th>Tipo de sangre necesitada</th>
+        <th>Pintas de sangre necesitadas</th>
+        <th>Fecha requerida</th>
+        <th>Tipos de sangre compatibles</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
+    <tbody>
+      <% @requests.each do |request| %>
+        <tr>
+          <td><%= request.name %></td>
+          <td><%= request.phone_number %></td>
+          <td><%= request.email %></td>
+          <td><%= request.needed_for %></td>
+          <td><%= request.blood_type_needed %></td>
+          <td><%= request.blood_units_needed %></td>
+          <td><%= request.date_needed %></td>
+          <td><%= request.compatible_blood_types %></td>
+          <td><%= link_to 'Ver', request, class:"btn pink flat" %></td>
+          <% if current_user.id == request.user_id %>
+          <td><%= link_to 'Editar', edit_request_path(request), class:"btn pink" %></td>
+          <td><%= link_to 'Eliminar', request, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn pink" %></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 <br>
-
-<%= link_to 'Nueva Solicitud', new_request_path %>

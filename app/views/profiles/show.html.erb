@@ -50,3 +50,22 @@
       </span>
     </div>
   </div>
+
+  <div class="col s8">
+    <h4 class="pink-text text">Posts</h4>
+    <ul class="collection">
+    <% @posts.each do |post| %>
+      <% if post.user_id == @profile.user_id %>
+        <li class="collection-item avatar">
+          <%=image_tag @profile.image.url(:mini), class:"circle z-depth-3"%>
+          <span class="title"><%= link_to @profile.name, profile_path(@profile)%></span>
+          <p><p class="grey-text text-lighten-1"><%=time_ago_in_words(post.created_at)%> ago</p><br>
+             <%=post.body%>
+          </p>
+          <a href="#!" class="secondary-content"><i class="material-icons">clear</i></a>
+        </li>
+      <%end%>
+    <%end%>
+    </ul>
+  </div>
+</div>

@@ -25,7 +25,7 @@ class PostsController < ApplicationController
     @post.user_email = current_user.email
     if @post.save
       flash[:success] = "Post was sucessfully created"
-      redirect_to post_path(@post)
+      redirect_to posts_path
     else
       render 'new'
     end
