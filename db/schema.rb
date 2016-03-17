@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160307033152) do
+ActiveRecord::Schema.define(version: 20160316191440) do
 
   create_table "posts", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 20160307033152) do
     t.string   "landscape_content_type"
     t.integer  "landscape_file_size"
     t.datetime "landscape_updated_at"
+    t.string   "username"
   end
 
   create_table "requests", force: :cascade do |t|

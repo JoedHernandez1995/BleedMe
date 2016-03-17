@@ -23,8 +23,8 @@
 </nav>
 <% elsif user_signed_in? %>
 <ul id="dropdown1" class="dropdown-content">
-  <li><%=link_to 'Ver Solicitudes', requests_path%></li>
-  <li><%=link_to 'Nueva Solicitud', new_request_path%></li>
+  <li><%=link_to 'Ver Solicitudes', requests_path, class:"pink-text text"%></li>
+  <li><%=link_to 'Nueva Solicitud', new_request_path, class:"pink-text text"%></li>
   <li class="divider"></li>
 </ul>
 <nav>
@@ -33,7 +33,7 @@
     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down">
       <li><%= link_to 'Timeline', posts_path, class:"pink-text text"%></li>
-      <li><a class="dropdown-button pink-text text" href='<%=link_to 'Solicitudes de Sangre, profiles_path'%>' data-activates="dropdown1">Solicitudes de Sangre<i class="material-icons right">arrow_drop_down</i></a></li>
+      <li><a class="dropdown-button pink-text text" data-activates="dropdown1">Solicitudes de Sangre<i class="material-icons right">arrow_drop_down</i></a></li>
       <li><a class="pink-text text modal-trigger" href="#modal1">Crear un Post</a></li>
       <li><%= link_to 'Mi Perfil', profiles_path, class:"pink-text text"%></li>
       <li><%= link_to('Cerrar Sesion', destroy_user_session_path, :method => :delete, class:"pink") %></li>

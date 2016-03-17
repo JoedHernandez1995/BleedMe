@@ -1,42 +1,38 @@
 <p id="notice"><%= notice %></p>
 
-<h3 class="center pink-text text">Solicitudes de sangre</h3>
+<h3 class="center pink-text text">Solicitudes de Sangre</h3>
 
-<div class="container">
-  <table class="responsive highlight bordered">
-    <thead>
-      <tr>
-        <th>Nombre de contacto</th>
-        <th>Teléfono de contacto</th>
-        <th>Correo electrónico</th>
-        <th>Sangre para</th>
-        <th>Tipo de sangre necesitada</th>
-        <th>Pintas de sangre necesitadas</th>
-        <th>Fecha requerida</th>
-        <th>Tipos de sangre compatibles</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
+<div class="container pink-text text">
+      <ul class="collapsible popout" data-collapsible="accordion">
       <% @requests.each do |request| %>
-        <tr>
-          <td><%= request.name %></td>
-          <td><%= request.phone_number %></td>
-          <td><%= request.email %></td>
-          <td><%= request.needed_for %></td>
-          <td><%= request.blood_type_needed %></td>
-          <td><%= request.blood_units_needed %></td>
-          <td><%= request.date_needed %></td>
-          <td><%= request.compatible_blood_types %></td>
-          <td><%= link_to 'Ver', request, class:"btn pink flat" %></td>
-          <% if current_user.id == request.user_id %>
-          <td><%= link_to 'Editar', edit_request_path(request), class:"btn pink" %></td>
-          <td><%= link_to 'Eliminar', request, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn pink" %></td>
-          <% end %>
-        </tr>
+        <li>
+          <div class="collapsible-header"><i class="material-icons">favorite</i> Solicitud de Sangre hecha por: <%=request.name%>
+            <% if current_user.id == request.user_id %>
+            <div class="right">
+              <%= link_to "Borrar", request, method: :delete, data: { confirm: 'Are you sure?' }, class:"pink-text text" %> |
+              <%= link_to "Editar", edit_request_path(request), class:"pink-text text" %>
+            </div>
+            <% end %>
+          </div>
+          <div class="collapsible-body">
+            <div class="container">
+            </br>
+              <ul>
+                <li><i class="material-icons prefix">person</i> <strong>Nombre del Solicitante: </strong> <%=request.name%></li></br>
+                <li><i class="material-icons prefix">phone</i>  <strong>Telefono del Solicitante: </strong> <%=request.phone_number%></li></br>
+                <li><i class="material-icons prefix">mail</i>   <strong>Email del Solicitante: </strong> <%=request.email%></li></br>
+                <li><i class="material-icons prefix">lens</i>   <strong>Tipo de Solicitud: </strong> <%=request.needed_for%></li></br>
+                <li><i class="material-icons prefix">colorize</i>  <strong>Tipo de Sangre Necesitado: </strong> <%=request.blood_type_needed%></li></br>
+                <li><i class="material-icons prefix">exposure_plus_1</i>  <strong>Pintas de Sangre Necesitadas: </strong> <%=request.blood_units_needed%></li></br>
+                <li><i class="material-icons prefix">insert_invitation</i>  <strong>Fecha Requerida: </strong> <%=request.date_needed%></li></br>
+                <li><i class="material-icons prefix">favorite_border </i><strong>Tipos de Sangre Compatibles: </strong> <%=request.compatible_blood_types%></li></br>
+                <li><i class="material-icons prefix">message </i><strong>Historia: </strong> </br><%=request.message%></li>
+              </ul>
+            </br>
+            </div>
+          </div>
+        </li>
       <% end %>
-    </tbody>
-  </table>
+      </ul>
 </div>
 <br>

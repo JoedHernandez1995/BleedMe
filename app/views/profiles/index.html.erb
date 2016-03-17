@@ -27,6 +27,7 @@
           </div>
           <div class="col s3 center">
             <h5 class="pink-text text"><%=profile.name%> <%=profile.last_name%></h5>
+            <h6 class="pink-text text">@<%=profile.username%></h6>
             <h6 class="pink-text text-lighten-2"><%=profile.occupation%><h6>
             </div>
             <div class="col s3 center">
@@ -62,7 +63,7 @@
         <h5>Acerca de Mi</h5><hr>
         <%=profile.biography%>
         <hr>
-        Joined on: <%= current_user.created_at.to_date.to_formatted_s :long_ordinal %>
+        Miembro desde: <%= current_user.created_at.to_date.to_formatted_s :long_ordinal %>
       </span>
     </div>
   </div>
@@ -96,11 +97,11 @@
       <% if post.user_id == current_user.id %>
         <li class="collection-item avatar">
           <%=image_tag profile.image.url(:mini), class:"circle z-depth-3"%>
-          <span class="title"><%= link_to profile.name,profile_path(profile)%></span>
+          <span class="title"><%= link_to profile.username,profile_path(profile)%></span>
           <p><p class="grey-text text-lighten-1"><%=time_ago_in_words(post.created_at)%> ago</p><br>
              <%=post.body%>
           </p>
-          <a href="#!" class="secondary-content"><i class="material-icons">clear</i></a>
+          <a href="#!" class="secondary-content pink-text text"><i class="material-icons">clear</i></a>
         </li>
       <%end%>
     <%end%>

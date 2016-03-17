@@ -22,6 +22,7 @@ class ProfilesController < ApplicationController
     @profile = Profile.new(profile_params)
     @profile.user_id = current_user.id
     @profile.email = current_user.email
+    @profile.username = current_user.username
     if @profile.save
       flash[:success] = "Profile was sucessfully created"
       redirect_to profiles_path
