@@ -10,7 +10,7 @@
           <li class="collection-item avatar">
             <%=image_tag profile.image.url(:mini), class:"circle z-depth-3"%>
             <% if profile.user_id == current_user.id %>
-              <span class="title"><%= link_to profile.name, profiles_path %></span>
+              <span class="title"><%= link_to profile.username, profiles_path %></span>
             <%else%>
               <span class="title"><%= link_to profile.name,profile_path(profile)%></span>
             <% end %>
